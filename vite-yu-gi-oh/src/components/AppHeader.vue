@@ -10,26 +10,28 @@
 </script>
 
 <template>
-    <div class="head-container">
-        <img src="../assets/img/logo.png" alt="yugi-logo" class="logo">
-        Yu-gi-Oh API 
-    </div>
+    <header>
+        <div class="head-container">
+             <img src="../assets/img/logo.png" alt="yugi-logo" class="logo">
+              <span>
+                Yu-Gi-Oh API
+              </span>
+        </div>
+    </header>
+    
 </template>
 
 <style>
 header{
-    width: 300px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center ;
+    font-size: 2rem;
 }
 
 .logo{
-    display: inline-block;
-    width: 200px;
-}
-
-.head-container{
-    display: flex;
-    text-align: start;
-    align-items: center ;
-    font-size: 2rem;
+    vertical-align: middle;
+    width: 100px;
 }
 </style>
