@@ -1,5 +1,6 @@
 <script>
    import CardsList from '../components/CardsList.vue';
+   
 
 export default {
     name:'AppMain',
