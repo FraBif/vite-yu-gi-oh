@@ -1,6 +1,7 @@
 <script>
     import CardsHolder from './CardsHolder.vue';
     import axios from 'axios';
+    import store from `../store`
  
  
 
@@ -10,7 +11,7 @@
             return {
                 apiUrl: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0',
                 CardsDatabase : [],
-                
+                store
             }
         },
         components:{
@@ -19,8 +20,8 @@
 
         created(){
             axios.get(this.apiUrl)
-            .then( (response) => {
-                CardsDatabase.push(response.data.results);
+            .then( (response) => 
+            {this.CardsDatabase = response.data.results;;
                
             })
             
@@ -30,12 +31,11 @@
 
 <template>
     <div class="container">
-        <div class="row py-3 px-5 justify-content-evenly">
-            <CardsHolder v-for="character in CardsList"
-                :name="character.name"
-                :archetype="character.species"
-                :status="character.status"
-                :image="character.image"
+        <div>
+            <CardsHolder v-for="card in CardsDatabase"
+                :name="cards.name"
+                :archetype="cards.archetype"
+                :image="cards.image"
             />
         </div>
     </div>

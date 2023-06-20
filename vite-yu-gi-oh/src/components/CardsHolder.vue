@@ -15,11 +15,11 @@
 </script>
 
 <template>
-     <article class="card mb-5 col-2 me-3 p-0">
-        <img :src="image" class="w-100" :alt="name + ' image'">
-        <div class="card-body text-center">
-            <h5 class="card-title fw-bold">
-                {{ name }} ciaoooo
+     <article>
+        <img :src="image">
+        <div>
+            <h5>
+                {{ name }} 
             </h5>
             <p class="card-text">
                 {{ archetype }} 
