@@ -1,6 +1,6 @@
 <script>
   export default {
-    name:'CardsHolder',
+    name:"CardsHolder",
     data(){
         return {
 
